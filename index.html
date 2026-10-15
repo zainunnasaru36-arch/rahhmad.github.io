@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profil profesional Ns. Rahmad Hidayatulah Hippy, S.Kep., perawat dan peneliti dari Gorontalo.">
+    <title>Ns. Rahmad Hidayatulah Hippy | Portfolio</title>
+
+    <style>
+        :root {
+            --navy: #0b1728;
+            --navy-light: #142841;
+            --gold: #d6b779;
+            --white: #f8f7f3;
+            --muted: #aeb9c8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        header {
+            padding: 22px 0;
+            border-bottom: 1px solid #ffffff18;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span,
+        .gold-text {
+            color: var(--gold);
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            font-size: 13px;
+            color: var(--muted);
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .hero {
+            min-height: 600px;
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 60px;
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(35px, 5vw, 62px);
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        h1 em {
+            color: var(--gold);
+            font-style: normal;
+        }
+
+        .hero p {
+            color: var(--muted);
+            max-width: 570px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: #f0d59c;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #ffffff45;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .photo-frame {
+            position: relative;
+            padding: 12px;
+            border: 1px solid var(--gold);
+            max-width: 350px;
+            margin: auto;
+        }
+
+        .photo-frame img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            background: var(--navy-light);
+        }
+
+        .photo-label {
+            text-align: center;
+            padding: 13px 0 3px;
+            color: var(--gold);
+            letter-spacing: 3px;
+            font-size: 10px;
+        }
+
+        section.content-section {
+            padding: 85px 0;
+            border-top: 1px solid #ffffff12;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(27px, 4vw, 38px);
+            margin-bottom: 8px;
+        }
+
+        .section-title p,
+        .about-text p {
+            color: var(--muted);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 45px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+        .quote {
+            margin-top: 25px;
+            padding: 20px;
+            border-left: 3px solid var(--gold);
+            background: var(--navy-light);
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .info-list {
+            background: var(--navy-light);
+            padding: 25px;
+            border: 1px solid #ffffff12;
+        }
+
+        .info-item {
+            padding: 13px 0;
+            border-bottom: 1px solid #ffffff14;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-item small {
+            display: block;
+            color: var(--gold);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-item strong {
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .timeline {
+            border-left: 1px solid var(--gold);
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 32px 30px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--gold);
+            left: -5.5px;
+            top: 9px;
+        }
+
+        .year {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .timeline-item h3 {
+            font-size: 18px;
+            margin: 4px 0;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .research-card {
+            background: linear-gradient(135deg, #142841, #0d1b2d);
+            border: 1px solid #d6b77955;
+            padding: 35px;
+            border-radius: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid #d6b77966;
+            padding: 4px 12px;
+            font-size: 10px;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .research-card h3 {
+            font-size: clamp(21px, 3vw, 29px);
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .research-card p {
+            color: var(--muted);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .social-card {
+            display: block;
+            padding: 23px;
+            border: 1px solid #ffffff20;
+            background: var(--navy-light);
+            border-radius: 6px;
+            transition: .3s;
+        }
+
+        .social-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .social-card small {
+            display: block;
+            color: var(--muted);
+        }
+
+        .social-card strong {
+            color: var(--gold);
+        }
+
+        footer {
+            padding: 28px 0;
+            border-top: 1px solid #ffffff18;
+            color: var(--muted);
+            font-size: 12px;
+            text-align: center;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 760px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                gap: 14px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding-top: 55px;
+            }
+
+            .photo-frame {
+                width: 80%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section.content-section {
+                padding: 60px 0;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+        <a href="#" class="logo">RAHMAD <span>HIPPY.</span></a>
+
+        <nav>
+            <a href="#tentang">Tentang Saya</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#penelitian">Penelitian</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- BAGIAN PROFIL -->
+    <section class="container hero">
+        <div>
+            <div class="eyebrow">Nurse · Researcher · Lifelong Learner</div>
+
+            <h1>
+                Ns. Rahmad<br>
+                <em>Hidayatulah Hippy, S.Kep.</em>
+            </h1>
+
+            <p>
+                Selamat datang di website pribadi saya.
+                Saya adalah lulusan Sarjana Keperawatan dan
+                Profesi Ners dari Universitas Muhammadiyah Gorontalo,
+                dengan ketertarikan pada keselamatan pasien dan
+                pengembangan ilmu keperawatan.
+            </p>
+
+            <div class="buttons">
+                <a class="btn btn-primary" href="#tentang">Tentang Saya</a>
+                <a class="btn btn-outline" href="#penelitian">Lihat Penelitian</a>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <!-- Ganti foto-rahmad.jpg dengan nama file fotomu -->
+            <img
+                src="foto-rahmad.jpg"
+                alt="Foto Ns. Rahmad Hidayatulah Hippy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div style="display:none; aspect-ratio:4/5; align-items:center; justify-content:center; text-align:center; color:#d6b779; padding:20px;">
+                Masukkan foto kamu dengan nama<br><b>foto-rahmad.jpg</b>
+            </div>
+            <div class="photo-label">PROFESSIONAL PROFILE</div>
+        </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section class="content-section" id="tentang">
+        <div class="container">
+            <div class="section-title">
+                <div class="eyebrow">Tentang Saya</div>
+                <h2>Profil <span class="gold-text">Pribadi</span></h2>
+                <p>Mengenal perjalanan dan latar belakang saya.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Nama lengkap saya adalah Ns. Rahmad Hidayatulah
+                        Hippy, S.Kep. Saya lahir di Gorontalo pada
+                        16 Oktober 2002 dan merupakan anak tunggal
+                        dari pasangan Iswanto Hippy dan Zainun Nasaru, S.Pd.
+                    </p>
+
+                    <p>
+                        Perjalanan pendidikan saya dimulai pada tahun 2009.
+                        Setelah menyelesaikan pendidikan dasar dan menengah,
+                        saya melanjutkan pendidikan di Universitas
+                        Muhammadiyah Gorontalo pada Program Studi
+                        Ilmu Keperawatan, Fakultas Ilmu Kesehatan.
+                    </p>
+
+                    <p>
+                        Pada tahun 2025, saya menyelesaikan pendidikan
+                        Sarjana Keperawatan dan Program Profesi Ners.
+                        Saya terus berupaya mengembangkan pengetahuan
+                        dan kompetensi dalam bidang keperawatan.
+                    </p>
+
+                    <div class="quote">
+                        "Ilmu, kepedulian, dan integritas merupakan
+                        bagian penting dalam memberikan pelayanan
+                        keperawatan yang bermutu."
+                    </div>
+                </div>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <small>Nama Lengkap</small>
+                        <strong>Ns. Rahmad Hidayatulah Hippy, S.Kep.</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <small>Tempat, Tanggal Lahir</small>
+                        <strong>Gorontalo, 16 Oktober 2002</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <small>Orang Tua</small>
+                        <strong>Iswanto Hippy & Zainun Nasaru, S.Pd.</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <small>Perguruan Tinggi</small>
+                        <strong>Universitas Muhammadiyah Gorontalo</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <small>Bidang</small>
+                        <strong>Keperawatan dan Penelitian</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENDIDIKAN -->
+    <section class="content-section" id="pendidikan">
+        <div class="container">
+            <div class="section-title">
+                <div class="eyebrow">Perjalanan Akademik</div>
+                <h2>Riwayat <span class="gold-text">Pendidikan</span></h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="year">2009</div>
+                    <h3>Taman Kanak-Kanak</h3>
+                    <p>Memulai pendidikan usia dini.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2009–2015</div>
+                    <h3>SDN 9 Limboto Barat</h3>
+                    <p>Menyelesaikan pendidikan sekolah dasar pada 2015.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2015–2018</div>
+                    <h3>SMP Negeri 1 Limboto Barat</h3>
+                    <p>Menyelesaikan pendidikan menengah pertama pada 2018.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2018–2021</div>
+                    <h3>SMA Negeri 1 Dungaliyo</h3>
+                    <p>Lulus sekolah menengah atas pada 2021.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2021–2025</div>
+                    <h3>Universitas Muhammadiyah Gorontalo</h3>
+                    <p>
+                        Menyelesaikan pendidikan S1 Keperawatan
+                        dan Program Profesi Ners pada 2025.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENELITIAN -->
+    <section class="content-section" id="penelitian">
+        <div class="container">
+            <div class="section-title">
+                <div class="eyebrow">Karya Ilmiah</div>
+                <h2>Penelitian <span class="gold-text">Keperawatan</span></h2>
+                <p>Fokus pada keselamatan pasien di lingkungan klinis.</p>
+            </div>
+
+            <article class="research-card">
+                <span class="tag">KARYA ILMIAH AKHIR NERS</span>
+
+                <h3>
+                    Kepatuhan Perawat dalam Penerapan Skrining
+                    Risiko Jatuh Pasien di Ruang ICU RSUD dr. Hasri Ainun Habibie
+                </h3>
+
+                <p>
+                    Karya Ilmiah Akhir Ners ini mengangkat topik
+                    kepatuhan perawat dalam penerapan skrining risiko
+                    jatuh pasien di ruang Intensive Care Unit (ICU).
+                    Topik ini berkaitan dengan penerapan prosedur
+                    keselamatan pasien dan upaya meningkatkan mutu
+                    pelayanan keperawatan.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="content-section" id="kontak">
+        <div class="container">
+            <div class="section-title">
+                <div class="eyebrow">Mari Terhubung</div>
+                <h2>Media Sosial & <span class="gold-text">Kontak</span></h2>
+                <p>Temukan dan hubungi saya melalui media sosial.</p>
+            </div>
+
+            <div class="social-grid">
+                <a class="social-card"
+                   href="https://www.facebook.com/"
+                   target="_blank" rel="noopener noreferrer">
+                    <small>Facebook</small>
+                    <strong>Rahmad Hippy ↗</strong>
+                </a>
+
+                <a class="social-card"
+                   href="https://www.tiktok.com/@rahmaadhippy_"
+                   target="_blank" rel="noopener noreferrer">
+                    <small>TikTok</small>
+                    <strong>@rahmaadhippy_ ↗</strong>
+                </a>
+
+                <a class="social-card"
+                   href="https://wa.me/6285397665353"
+                   target="_blank" rel="noopener noreferrer">
+                    <small>WhatsApp</small>
+                    <strong>0853-9766-5353 ↗</strong>
+                </a>
+
+                <a class="social-card"
+                   href="https://www.instagram.com/rahmaadd16___/"
+                   target="_blank" rel="noopener noreferrer">
+                    <small>Instagram</small>
+                    <strong>@rahmaadd16___ ↗</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 <span>Ns. Rahmad Hidayatulah Hippy, S.Kep.</span>
+        <br>
+        Keperawatan · Penelitian · Pengabdian
+    </div>
+</footer>
+
+</body>
+</html>
